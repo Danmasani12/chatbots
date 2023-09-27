@@ -6,10 +6,13 @@ body {
 }
 @font-face
 {
-    font-family: 'Telegraf';
-    src: url('fonts/Telegraf Regular 400.otf');
+    font-family: Telegraf;
+    src: url('fonts/Telegraf400.otf');
+}@font-face { 
     font-family: 'Poppins';
     src: url('fonts/Poppins-Regular.ttf');
+}
+@font-face { 
     font-family: 'Lato';
     src: url('fonts/Lato-Regular.ttf');
 }
@@ -23,9 +26,19 @@ body {
     line-height: normal;
     background-color: black;
     text-align: center;
+    margin-top: 0;
     flex-shrink: 0;
     padding-top: 2rem;
     padding-bottom: 1rem;
+}
+
+.nav-link.active {
+    color: #2477D8;
+    font-family: 'Lato';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .top-header em {
@@ -43,12 +56,12 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header a {
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 20px;
     font-style: normal;
     font-weight: 800;
@@ -80,6 +93,106 @@ nav .nav-link {
     padding-right: 45px;
 }
 
+.popular {
+    border-radius: 50px;
+    border: 1px solid #FFF;
+    background: #6DB467;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    height: 40px;
+    flex-shrink: 0;
+    font-family: 'Poppins';
+    margin-left: 7rem;
+    margin-top: -2rem;
+    font-size: 24px;
+    color: #fff;
+    font-style: normal;
+    width: 100px;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 1rem;
+}
+
+.pricing {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.pricing .login {
+    border-radius: 100px;
+    background: var(--CHATBOT-GRADIENT, linear-gradient(130deg, #3A69FF 3.51%, #C23E56 99.85%));
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
+    width: 182px;
+    height: 65px;
+    flex-shrink: 0;
+    font-family: Telegraf;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    color: #FFF;
+    position: absolute;
+}
+
+.pricing .free-trial {
+    border-radius: 100px;
+    width: 200px;
+    height: 65px;
+    flex-shrink: 0;
+    text-indent: 3rem;
+    border-radius: 50px;
+    border: 1px solid #E2E2E2;
+    background: #F4F4F4;
+    color: #969696;
+    text-align: center;
+    margin-left: 7rem;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.money {
+    color: #398D32;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.month {
+    color: #524F4F;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.pricing-section  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cardd{
+    width: 440px;
+    height: 744px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #F9F9F9;
+    text-align: center;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cardd button.advance-btn{
+    border-radius: 15px;
+    background: var(--CHATBOT-GRADIENT, linear-gradient(130deg, #3A69FF 3.51%, #C23E56 99.85%));
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
 .buttons .login{
     border-radius: 100px;
     border: 6px solid var(--CHATBOT-GRADIENT, #3A69FF);
@@ -89,8 +202,9 @@ nav .nav-link {
     -webkit-text-fill-color: transparent;
     width: 182px;
     height: 65px;
+    padding: .5rem 1rem;
     flex-shrink: 0;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 24px;
     font-style: normal;
     font-weight: 800;
@@ -104,7 +218,8 @@ nav .nav-link {
     width: 182px;
     height: 65px;
     flex-shrink: 0;
-    font-family: 'Telegraf';
+    padding: 1rem 1rem;
+    font-family: Telegraf;
     font-size: 24px;
     font-style: normal;
     font-weight: 800;
@@ -168,7 +283,7 @@ main {
     width: 292px;
     height: 80px;
     flex-shrink: 0;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 24px;
     font-style: normal;
     font-weight: 800;
@@ -182,7 +297,7 @@ main {
     width: 258px;
     height: 86.827px;
     flex-shrink: 0;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 24px;
     font-style: normal;
     font-weight: 800;
@@ -217,13 +332,13 @@ main {
     align-items: center;
 }
 
-.title {
+.title, .partners .title{
     color: #000;
-font-family: 'Telegraf';
-font-size: 40px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
+    font-family: Telegraf;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 .help, .market{
@@ -281,7 +396,7 @@ line-height: normal;
 
 .help2 strong {
     color: #398D32;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
@@ -290,7 +405,7 @@ line-height: normal;
 
 .help2 b{
     color: #000;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 36px;
 }
 
@@ -413,7 +528,7 @@ line-height: normal;
 
 .integration {
 color: #000;
-font-family: 'Telegraf';
+font-family: Telegraf;
 font-size: 40px;
 font-style: normal;
 font-weight: 800;
@@ -434,7 +549,7 @@ flex-shrink: 0;
 }
 
 .why_us {
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
@@ -500,8 +615,11 @@ flex-shrink: 0;
     display: flex;
     flex-direction: row;
     gap: 70px;
-    width: 671px;
+    min-width: 671px;
+    min-height: 450px;
     height: fit-content;
+    margin: auto;
+    overflow-y: auto;
 }
 
 .help .card {
@@ -510,7 +628,7 @@ flex-shrink: 0;
     background: #F8F8F8;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
     width: 671px;
-    height: 310px;
+    height: 340px;
     flex-shrink: 0;
     text-align: left;
     padding: 1rem 2rem;
@@ -559,7 +677,7 @@ margin-right: 1rem;
     background: #E6F1FF;
     width: 671px;
     flex-shrink: 0;
-    height: 138px;
+    height: 155px;
     display: flex;
     margin: 0;
     flex-direction: column;
@@ -649,7 +767,7 @@ padding: 15%;
 
 .photo-text p {
     color: #000;
-font-family: 'Telegraf';
+font-family: Telegraf;
 font-size: 40px;
 font-style: normal;
 font-weight: 800;
@@ -733,6 +851,13 @@ font-weight: 700;
 line-height: normal;
 }
 
+.about_us{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 6% 0;
+}
+
 .industries{
     text-align: center;
     height: 300px;
@@ -746,7 +871,7 @@ line-height: normal;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Telegraf';
+    font-family: Telegraf;
     font-size: 48px;
     font-style: normal;
     font-weight: 800;
@@ -843,3 +968,490 @@ line-height: normal;
     padding: 3rem;
     width: 100%;
 }
+
+.login_background{
+    width: 100vw;
+    height: 100vh;
+    background: #F3F3F3;
+    padding-top: 5%;
+}
+
+.login_card{
+    width: 658px;
+    height: 658px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 2px solid rgba(163, 72, 126, 0.66);
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+    margin: 0 auto;
+}
+
+
+.form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.7rem;
+}
+
+.form img {
+    width: 300px;
+    height: 70px;
+    margin: 3rem 0;
+}
+
+.form .login-input, .form .trial-input, .input, .code, .phone {
+    border-radius: 15px;
+    align-self: center;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+    height: 60px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    text-indent: .5rem;
+    color: #ADADAD;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.code {
+    width: 100px;
+}
+.phone{
+    width: 300px;
+}
+.input{
+    width: 200px;
+}
+.form .trial-input{
+    width: 410px;
+}
+.form .login-input{
+    width: 518px;
+}
+
+.remember{
+    display: flex;
+    width: 518px;
+    height: 82px;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forgot {
+    color: #5F5E5E;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sign-up{color: #2477D8;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+div.partners {
+    background: linear-gradient(96deg, #faf7ed 0%, #FFF 100%);
+}
+
+.login-btn {
+    border-radius: 10px;
+    background: var(--CHATBOT-GRADIENT, linear-gradient(130deg, #3A69FF 3.51%, #C23E56 99.85%));
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+    width: 207px;
+    height: 70px;
+    align-self: center;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.help p.partner{
+    color: #626262;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145.5%; /* 37.83px */
+    width: 932px;
+    height: 160px;
+    align-self: center;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.partner {
+    color: #398D32;
+}
+
+.partners .title {
+    padding-top: 3%;
+}
+
+.about_us p{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_us .span {
+    color: #000;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.about_us p {
+    width: 687px;
+    height: 107px;
+    flex-shrink: 0;
+    align-self: center;
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about_us img {
+    margin-top: -4rem;
+}
+
+.about_us > p.join {
+    margin-top: 5rem;
+}
+
+.cardd button {
+    border-radius: 15px;
+    width: 378px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #2477D8;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 24px;
+}
+
+.cardd .card .content{
+    margin-bottom: .4rem;
+}
+
+.cardd .card {
+    padding: 1rem;
+    color: #524F4F;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.cardd .card .plan {
+    margin-bottom: 1.5rem;
+    color: #000;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cardd .card {
+    width: 372px;
+    height: 401px;
+    flex-shrink: 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+#faq {
+    text-align: center;
+}
+
+.faq{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #D1D1D1;
+    background: #F8F8F8;
+    color: #4E4E4E;
+    align-content: center;
+    align-items: baseline;
+    height: fit-content;
+    margin: 1rem auto;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 0 1rem;
+    width: 92%;
+}
+
+.faq p {
+    background: #F8F8F8;
+    color: #4E4E4E;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 1000px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.faq button{
+    width: 50px;
+    height: 50px;
+    border: 0;
+}
+
+.freetrial_background{
+    width: 100vw;
+    height: 100vh;
+    background: #F3F3F3;
+    padding-top: 5%;
+}
+
+.freetrial_card{
+    width: 1000px;
+    height: 658px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 2px solid rgba(163, 72, 126, 0.66);
+    background: #FFF;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.freetrl{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.freetrl:first-child{
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.freetrl_signup{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.form label input[type="checkbox"]{
+    align-self: center;
+    justify-self: center;
+    float: left;
+    color: #5F5E5E;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form input[type="checkbox"]{
+    border-radius: 2px;
+border: 1px solid #B0B0B0;
+background: #FFF;width: 25px;
+height: 25px;
+flex-shrink: 0;
+}
+
+.trial-btn {
+    width: 431px;
+height: 60px;
+flex-shrink: 0;
+border-radius: 10px;
+background: var(--CHATBOT-GRADIENT, linear-gradient(130deg, #3A69FF 3.51%, #C23E56 99.85%));
+box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);color: #FFF;
+font-family: 'Poppins';
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.book_demo_container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.book_demo_content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    justify-content: space-between;
+}
+
+.column1, .column1 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+.column1 div {
+    gap: 1rem;
+}
+.column1 {
+    gap: 5rem;
+}
+
+.column1 div label {color: #000;
+    font-family: 'Poppins';
+    vertical-align: middle;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.column1 div .leading_brands {
+    color: #6B6B6B;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.column2 {
+    border-radius: 20px;
+    background: #FDFDFD;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.10);
+    width: 680px;
+    height: 800px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.column2 .form .input {
+    width: 300px;
+}
+
+.column2 .form .phone {
+    width: 500px;
+}
+
+.column2 .form .trial-input {
+    width: 610px;
+}
+
+.column2 .checkbox {
+    width: 610px;
+    float: left;
+}
+
+.column1 .leads {
+    margin-top: 7rem;
+}
+
+.marquee-brands{
+    display: none;
+}
+
+
+@media (max-width: 500px) {
+    .freetrial_card {
+        flex-direction: column;
+        width: 490px;
+        height: fit-content;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .freetrial_card {
+        flex-direction: column;
+        width: 490px;
+        height: fit-content;
+        font-size: 12px;
+    }
+    .help{
+        height: fit-content;
+    }
+    .help .why_us_content {
+        display: flex;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        height: fit-content;
+    }
+
+    .partners {
+        height: fit-content;
+    }
+
+    .partners img {
+        width: 100%;
+        height: 100%;
+    }
+    .help1, .text-group1, .help > div, .help2{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .ellipse{
+        width: 25px;
+        height: 25px;
+    }
+    .help > div img {
+        width: 100%;
+    }
+    .sales {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .brands {
+        display: none;
+    }
+    .join{
+        width: 100%;
+    }
+    p.content{
+        flex-direction: row;
+        gap: 10px;
+        text-align: start;
+        width: 300px;
+    }
+    footer, .features {
+        display: flex;
+        flex-direction: column;
+    }
+    .social, .top{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
