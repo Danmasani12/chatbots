@@ -16,15 +16,29 @@
         </p>
         <div class="header">
             <a href="#">
-                <img src="images/brand.png" alt="icon" width="300px" srcset="">
+                <img src="images/brand.png" alt="icon" srcset="">
             </a>
             <nav class="header-nav">
                 <a href="commerce.html" class="nav-link">Solution</a>
                 <a href="features.html" class="nav-link">Features</a>
                 <a href="industries.html" class="nav-link">Industry</a>
-                <a href="about_us.html" class="nav-link">About Us</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about_us.html" class="nav-link active">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a> 
+                <div class="buttons">
+                    <a class="login" href="/login.html">Login</a>
+                    <a class="free-trial" href="/free_trial.html">Free Trail</a>
+                </div>
             </nav>
+            <button class="btn" onclick="myFunction()">
+                <img src="images/th.jpg" alt="menu" srcset="">
+            </button>
+        </div>
+        <div id="menu">
+            <a href="commerce.html" class="nav-link">Solution</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="industries.html" class="nav-link">Industry</a>
+            <a href="about_us.html" class="nav-link active">About Us</a>
+            <a href="pricing.html" class="nav-link">Pricing</a> 
             <div class="buttons">
                 <a class="login" href="/login.html">Login</a>
                 <a class="free-trial" href="/free_trial.html">Free Trail</a>
@@ -40,8 +54,8 @@
                     Join the chatbot revolution and enhance your customer experience today.
                 </p>
                 <div class="buttons">
-                    <button class="free-trial">Free Trial</button>
-                    <button class="book-demo"><img src="images/PaperPlaneTilt.svg" alt="" srcset=""> Book Demo</button>
+                    <a class="free-trial">Free Trial</a>
+                    <a class="book-demo"><img src="images/PaperPlaneTilt.svg" alt="" srcset=""> Book Demo</a>
                 </div>
             </div>
             <img src="images/bot.png" alt="" class="bot" srcset="">
@@ -80,7 +94,7 @@
                 <h3 class="">SALES AND MARKETTING</h3>
                 <div class="help1">
                     <div class="help-image">
-                        <img src="images/help-image.png" alt="" srcset="">
+                        <img src="images/help-image.png" alt="" id="help-image" srcset="">
                     </div>
                     <div class="help2">
                         <p><strong>10x </strong><b>Conversion in your business</b></p>
@@ -89,18 +103,30 @@
                             <label class="featured">FEATURES  USE</label>
                             <div class="line"></div>
                         </div>
-                        <p class="content">
-                            <img src="images/Ellipse 45.svg" class="ellipse" srcset=""> No Code Workflow
-                        </p>
-                        <p class="content">
-                            <img src="images/Ellipse 45.svg" class="ellipse" srcset=""> Prebuilt Conversation Workflows
-                        </p>
-                        <p class="content">
-                            <img src="images/Ellipse 45.svg" class="ellipse" srcset=""> Natural Language Processing
-                        </p>
-                        <p class="content">
-                            <img src="images/Ellipse 45.svg" class="ellipse" srcset=""> Intelligent Analytics
-                        </p>
+                        <div class="content">
+                            <img src="images/Ellipse 45.svg" class="ellipse" srcset="">
+                            <p>
+                                No Code Workflow
+                            </p>
+                        </div>
+                        <div class="content">
+                            <img src="images/Ellipse 45.svg" class="ellipse" srcset="">
+                            <p>
+                                Prebuilt Conversation Workflows
+                            </p>
+                        </div>
+                        <div class="content">
+                            <img src="images/Ellipse 45.svg" class="ellipse" srcset=""> 
+                            <p>
+                                Natural Language Processing
+                            </p>
+                        </div>
+                        <div class="content">
+                            <img src="images/Ellipse 45.svg" class="ellipse" srcset="">
+                            <p >
+                                Intelligent Analytics
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,9 +145,9 @@
                     <a href="#">Google</a>
                 </div>
                 <div class="main">
-                    <img src="images/phone.gif" alt="" srcset="">
+                    <img src="images/phone.gif" alt="" id="phone" srcset="">
                     <div class="phone-content">
-                        <img src="images/pngwing.png" alt="" srcset="">
+                        <img src="images/pngwing.png" alt="" id="whatsapp" srcset="">
                         <div class="text">
                             From product discovery to payment , use our WhatsApp solution to help customers seamlessly connect with your brand.
                         </div>
@@ -309,9 +335,7 @@
             <li>Career</li>
             <li>Contact Us</li>
         </ul>
-        
-        
-        
     </footer>
+    <script src="menu.js"></script>
 </body>
 </html>

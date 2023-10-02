@@ -53,11 +53,17 @@ body {
     flex-shrink: 0;
 }
 
+.header img{
+    width: 300px;
+}
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
+    width: 100%;
 }
 
 .header a {
@@ -81,9 +87,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 70%;
 }
 
-nav .nav-link {
+.nav-link {
     color: #000;
     font-family: 'Lato';
     font-size: 24px;
@@ -290,12 +297,20 @@ main {
     line-height: normal;
 }
 
+.header-nav .buttons{
+    margin-left: auto;
+}
+
+.text-group1 .buttons .book-demo{
+    height: 50px;
+}
+
 .text-group1 .buttons .free-trial {
     border-radius: 82.692px;
     background: var(--CHATBOT-GRADIENT, linear-gradient(130deg, #3A69FF 3.51%, #C23E56 99.85%));
     box-shadow: 0px 0px 11.57692px 0px rgba(0, 0, 0, 0.10);
     width: 258px;
-    height: 86.827px;
+    height: 40px;
     flex-shrink: 0;
     font-family: Telegraf;
     font-size: 24px;
@@ -317,7 +332,7 @@ main {
     justify-content: space-between;
 }
 
-.first .bot {
+.bot {
     width: 40%;
     margin-top: 5%;
     margin-bottom: 3%;
@@ -450,6 +465,7 @@ main {
 .content {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     color: #000;
     font-family: 'Poppins';
     font-size: 24px;
@@ -463,6 +479,7 @@ main {
     height: 13px;
     padding-right: 10px;
     margin: auto 0;
+    padding: 0;
 }
 
 .social {
@@ -622,7 +639,7 @@ flex-shrink: 0;
     overflow-y: auto;
 }
 
-.help .card {
+.card {
     border-radius: 15px;
     border: 1px solid #B0D5FF;
     background: #F8F8F8;
@@ -657,9 +674,9 @@ flex-shrink: 0;
 }
 .profile {
     width: 150px;
-height: 150px;
-flex-shrink: 0;
-margin-right: 1rem;
+    height: 150px;
+    flex-shrink: 0;
+    margin-right: 1rem;
 }
 
 .name {
@@ -742,20 +759,19 @@ button {
 }
 
 .chat-bot-section {
-    margin: 0 auto;
     width: 100vw;
 }
 
 .photo-container img{
     width: 313px;
-height: 313px;
-flex-shrink: 0;
-border-radius: 50%;
-background-color: #fff;
-text-align: center;
-align-items: center;
-align-content: center;
-padding: 15%;
+    height: 313px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding: 15%;
 }
 
 .photo-text {
@@ -1165,6 +1181,24 @@ div.partners {
     text-align: left;
 }
 
+#menu {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #b9ffee;
+    padding: 0 10%;
+    gap: 10px;
+}
+#menu .buttons{
+    gap: 10px;
+    align-items: left;
+}
+
+#menu a {
+    width: 50%;
+    padding-right: 0;
+}
+
 .cardd .card .plan {
     margin-bottom: 1.5rem;
     color: #000;
@@ -1381,14 +1415,12 @@ line-height: normal;
 .marquee-brands{
     display: none;
 }
-
-
-@media (max-width: 500px) {
-    .freetrial_card {
-        flex-direction: column;
-        width: 490px;
-        height: fit-content;
-        font-size: 12px;
+#menu {
+    display: none;
+}
+@media (min-width: 600px) {
+    .btn, #menu {
+        display: none;
     }
 }
 
@@ -1398,6 +1430,19 @@ line-height: normal;
         width: 490px;
         height: fit-content;
         font-size: 12px;
+    }
+    .marquee-brands{
+        display: inline;
+        align-content: center;
+        align-items: center;
+    }
+    #help-image{
+        height: 400px;
+    }
+    .marquee-brands img{
+        padding-right: 20px;
+        width: 100px;
+        height: 60px;
     }
     .help{
         height: fit-content;
@@ -1421,12 +1466,16 @@ line-height: normal;
         flex-direction: column;
         height: fit-content;
     }
-    .ellipse{
+    div .ellipse{
         width: 25px;
         height: 25px;
     }
     .help > div img {
         width: 100%;
+    }
+    .element p,.marketing-card p {
+        width: auto;
+        height: auto;
     }
     .sales {
         flex-direction: column;
@@ -1448,10 +1497,214 @@ line-height: normal;
         display: flex;
         flex-direction: column;
     }
-    .social, .top{
+    .features label{
+        font-size: 16px;
+    }
+    .features 
+    .help p.partner{
+        width: auto;
+        height: auto;
+    }
+    .social, .social .top, .chat-bot{
         display: flex;
         flex-direction: column;
     }
+    .social .top{
+        width: auto;
+        height: auto;
+    }
+    .top a {
+        width: 100%;
+    }
+    .profile {
+        max-width: 70px;
+        height: auto;
+    }
+    .card-header {
+        padding: .5rem 0;
+    }
+    .card-content{
+        max-width: 380px;
+        font-size: 16px;
+        max-height: auto;
+    }
+    .header img{
+        width: 150px;
+    }
+    .header-nav, .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons .login, .buttons .free-trial{
+        width: 50%;
+        height: auto;
+    }
+    nav .buttons{
+        margin-left: 0;
+        width: 100%;
+        gap: 10px;
+    }
+    .header-nav{
+        display: none;
+    }
+    .card{
+        max-width: 290px;
+        height: auto;
+    }
+    #phone{
+        height: 50%;
+        width: 100%;
+    }
+    .card-header label {
+        font-size: 1em;
+    }
+    .chat-bot-section{
+        max-height: auto;
+    }
+    .chat-bot{
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .photo-container img{
+        width: 150px;
+        height: 150px;
+        padding: auto;
+        align-items: center;
+        align-content: center;
+    }
+    .photo-text p{
+        max-width: 70%;
+        font-size: 16px;
+    }
+    .about_us .span{
+        font-size: 24px;
+        width: auto;
+    }
+    .about_us p{
+        font-size: 16px;
+        width: auto;
+    }
+    .about_us img {
+        max-width: 350px;
+        max-height: auto;
+    }
+    .btn {
+        display: block;
+        border: 0;
+        background-color: transparent;
+    }
+    .btn img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .first, .text-group1 .buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .text-group1{
+        width: auto;
+    }
+    .text-group1 .communication,.text-group1{
+        font-size: 32px;
+    }
+    .text-group1 .join{
+        width: 100%;
+        height: auto;
+    }
+    .text-group1 .buttons .free-trial, .text-group1 .buttons .book-demo{
+        width: 100%;
+        height: auto;
+    }
+    .bot {
+        width: 70%;
+    }
+    .help2 {
+        padding: 0 10px;
+    }
+    .help2 strong, .help2 b {
+        font-size: 24px;
+    }
+    .help2 .join{
+        font-size: 16px;
+        width: auto;
+        height: auto;
+    }
+    .content{
+        font-size: 16px;
+    }
+    .content p{
+        width: 90%;
+    }
+    .content img{
+        width: 13px;
+        height: 13px;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .phone-content {
+        margin: 0;
+        padding: 10px;
+    }
+    #whatsapp {
+        width: 50px;
+        height: 50px;
+    }
+    .main .text {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+    }
+    img.social-media{
+        height: auto;
+        width: 100%;
+    }
+    .market > .maketing-content, .market{
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        width: auto;
+    }
+    .element .marketing-card{
+        height: auto;
+    }
+    .marketing-card > div {
+        width: 100%;
+        height: 40px;
+    }
+    #features .help2 p {
+        width: auto;
+    }
+    .pricing-section  {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .cardd .card, .cardd{
+        width: auto;
+        height: auto;
+    }
+    .cardd:first-child{
+        margin-bottom: 1rem;
+    }
+    .cardd button.advance-btn, .cardd button{
+        width: 100%;
+    }
+    .popular {
+        position: absolute;
+        height: 40px;
+        flex-shrink: 0;
+        font-family: 'Poppins';
+        margin-left: 0rem;
+        margin-top: -2rem;
+        font-size: 16px;
+        color: #fff;
+        font-style: normal;
+        width: 100px;
+        font-weight: 500;
+        line-height: normal;
+        padding-top: 1rem;
+    }
 }
-
-

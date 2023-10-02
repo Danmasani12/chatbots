@@ -17,15 +17,29 @@
         </p>
         <div class="header">
             <a href="#">
-                <img src="images/brand.png" alt="icon" width="300px" srcset="">
+                <img src="images/brand.png" alt="icon" srcset="">
             </a>
             <nav class="header-nav">
                 <a href="commerce.html" class="nav-link">Solution</a>
                 <a href="features.html" class="nav-link">Features</a>
                 <a href="industries.html" class="nav-link">Industry</a>
-                <a href="about_us.html" class="nav-link">About Us</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about_us.html" class="nav-link active">About Us</a>
+                <a href="pricing.html" class="nav-link">Pricing</a> 
+                <div class="buttons">
+                    <a class="login" href="/login.html">Login</a>
+                    <a class="free-trial" href="/free_trial.html">Free Trail</a>
+                </div>
             </nav>
+            <button class="btn" onclick="myFunction()">
+                <img src="images/th.jpg" alt="menu" srcset="">
+            </button>
+        </div>
+        <div id="menu">
+            <a href="commerce.html" class="nav-link">Solution</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="industries.html" class="nav-link">Industry</a>
+            <a href="about_us.html" class="nav-link active">About Us</a>
+            <a href="pricing.html" class="nav-link">Pricing</a> 
             <div class="buttons">
                 <a class="login" href="/login.html">Login</a>
                 <a class="free-trial" href="/free_trial.html">Free Trail</a>
@@ -121,5 +135,6 @@
             <li>Contact Us</li>
         </ul>
     </footer>
+    <script src="menu.js"></script>
 </body>
 </html>
