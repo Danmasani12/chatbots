@@ -62,16 +62,16 @@
         <hr style="background: #E3E3E3; width: 100%; height: 1px;">
 
         
-        <div class="pricing">
-            <button class="login">Monthly</button>
-            <button class="free-trial">Yearly</button>
+        <div class="pricing" id="pricing">
+            <button class="login active" id="login" onclick="monthly()">Monthly</button>
+            <button class="free-trial" id="free-trial" onclick="yearly()">Yearly</button>
         </div>
 
         <section class="pricing-section">
             <div class="cardd">
                 <h3 class="title">Free</h3>
                 <p class="money">
-                    <img src="images/india.png" alt="" srcset="">0 <b class="month">/Monthly</b>
+                    <img src="images/india.png" alt="" srcset=""><span id="money">0</span> <b class="month" id="month">/Monthly</b>
                 </p>
                 <button>Start free</button>
                 <hr style="background: #E3E3E3; width: 100%; height: 1px;">
@@ -115,7 +115,7 @@
                 <label class="popular">Popular</label>
                 <h3 class="title">Growth</h3>
                 <p class="money">
-                    <img src="images/india.png" alt="" srcset="">1490 <b class="month">/Monthly</b>
+                    <img src="images/india.png" alt="" srcset=""><span id="money">1490</span> <b class="month" id="month">/Monthly</b>
                 </p>
                 <button>Get a Demo</button>
                 <hr style="background: #E3E3E3; width: 100%; height: 1px;">
@@ -163,7 +163,7 @@
             <div class="cardd">
                 <h3 class="title">Advanced</h3>
                 <p class="money">
-                    <img src="images/india.png" alt="" srcset="">0 <b class="month">/Monthly</b>
+                    <img src="images/india.png" alt="" srcset=""><span id="money">1243</span> <b class="month" id="month">/Monthly</b>
                 </p>
                 <button class="advance-btn">Get a Demo</button>
                 <hr style="background: #E3E3E3; width: 100%; height: 1px;">
